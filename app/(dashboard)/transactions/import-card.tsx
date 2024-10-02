@@ -64,7 +64,7 @@ export const ImportCard =({
     const getColumnIndex = (column:string)=>{
         return column.split("_")[1];
     };
-
+        
         const mappedData= {
         headers: headers.map((_header,index)=>{
             const columnIndex = getColumnIndex(`column_${index}`);
@@ -81,6 +81,7 @@ export const ImportCard =({
          }).filter((row)=>row.length>0)
         }   
 
+        
           const arrayOfData = mappedData.body.map((row)=>{
             return row.reduce((acc:any,cell,index)=>{
                 const header = mappedData.headers[index];

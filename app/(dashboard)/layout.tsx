@@ -4,6 +4,9 @@ type Props={
     children :React.ReactNode;
 };
 
+
+// every future route has a common layout here 
+
 const DashBoardLayout = ({children} : Props)=>{
     return(
         <>

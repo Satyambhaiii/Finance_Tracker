@@ -24,7 +24,7 @@ type FormValues = z.input<typeof formSchema>;
 
 type Props = {
   id?: string;
-  defaultValues?: FormValues;
+  defaultValues?: FormValues;  // while editing 
   onSubmit: (values: FormValues) => void;
   onDelete?: () => void;
   disabled?: boolean;
@@ -67,7 +67,7 @@ export const AccountForm = ({
                 <Input
                  disabled={disabled}
                 placeholder="e.g Cash, Bank, Credit Card"
-                {...field}
+                {...field} // this handles eveNT HANdlers
                 />
             </FormControl>
          </FormItem>

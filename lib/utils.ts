@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge"
 import { eachDayOfInterval, isSameDay, subDays,format } from "date-fns";
 
 
+// to handle multiple and dynamic tailwind classes without conflicting
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }

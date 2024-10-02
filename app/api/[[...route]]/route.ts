@@ -19,10 +19,7 @@ const app = new Hono().basePath("/api")
     .route("/categories",categories)
     .route("/transactions",transactions)
     .route("/summary",summary)
-
-
-// app.route("/authors",authors);
-// app.route("/books",books);
+    export type AppType = typeof routes
 
 // no more api file routing
 export const GET = handle(app)
@@ -30,7 +27,6 @@ export const POST = handle(app)
 export const PATCH = handle(app)
 export const DELETE = handle(app)
 
-export type AppType = typeof routes
 // end to end safety with Apptype
 
 // app

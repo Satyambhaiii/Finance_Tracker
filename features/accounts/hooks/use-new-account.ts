@@ -7,6 +7,7 @@ type NewAccountState={
     onClose: () => void;
 }
 
+// this is for opening and closing of the drawer
 export const useNewAccount= create<NewAccountState>((set)=>({
    isOpen:false,
    onOpen : ()=>set(({isOpen:true})),

@@ -15,6 +15,7 @@ const formSchema = insertAccountSchema.pick({
     name: true,
   });
   
+  // for main page display for drawer
 type FormValues = z.input<typeof formSchema>; 
 
 export const NewAccountSheet = () => {

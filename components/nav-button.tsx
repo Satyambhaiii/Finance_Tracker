@@ -11,7 +11,7 @@ type Props = {
 export const NavButton = ({ href, label, isActive }: Props) => {
   return (
     <Button
-      asChild
+      asChild  // to dynamic render 
       size="sm"
       variant="outline"
       className={cn(

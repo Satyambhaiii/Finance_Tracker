@@ -19,10 +19,10 @@ const routes = [
     href: "/transactions",
     label: "Transactions",
   },
-  {
-    href: "/settings",
-    label: "Settings",
-  },
+  // {
+  //   href: "/settings",
+  //   label: "Settings",
+  // },
   {
     href: "/categories",
     label: "Categories",
@@ -34,15 +34,16 @@ const routes = [
 ];
 
 export const Navigation = () => {
-  const router = useRouter();
+  const router = useRouter();  // get access of the current router object 
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useMedia("(max-width: 1024px)", false); // Removed space in the media query string
   
   const onClick = (href: string) => {
-    router.push(href);
-    setIsOpen(false);
+    router.push(href);  // for navigate thorugh pages
+    setIsOpen(false);  //to close the drawer
   };
+
 
   if (isMobile) {
     return (

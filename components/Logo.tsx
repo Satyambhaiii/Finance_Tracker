@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const HeaderLogo = () => {
   return (
+    // when we click on logo it redirects to home page as href /
     <Link href="/">
       <div className="items—center hidden lg:flex">
         <Image src="/logo.svg" alt="Logo" height={28} width={28} />

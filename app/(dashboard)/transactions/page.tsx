@@ -29,20 +29,6 @@ const INITIAL_IMPORT_RESULTS={
 }
 
 
-//  const data = [
-//     {
-//       id: "728ed52f",
-//       amount: 100,
-//       status: "pending",
-//       email: "m@example.com",
-//     },
-//     {
-//       id: "728ed52f",
-//       amount: 50,
-//       status: "success",
-//       email: "a@example.com",
-//     },
-//   ]
 
 const TransactionsPage = () => {
   const [AccountDialog,confirm] = useSelectAccount()

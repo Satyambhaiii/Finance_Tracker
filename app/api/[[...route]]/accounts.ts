@@ -12,13 +12,9 @@ const app = new Hono().
    get("/",
     clerkMiddleware(),
     async (c)=>{
-     
     const auth = getAuth(c);
       if(!auth?.userId){
         return c.json({error:"Unauthorized"},401)
-        // throw new HTTPException(401,{
-        //   res: c.json({error:"Unauthorized"},401),
-        // });
       }
 
     const data= await db
@@ -28,7 +24,6 @@ const app = new Hono().
       })
       .from((accounts))
       .where(eq(accounts.userId,auth.userId));
-    
     return c.json({data});
   })
   .get(
@@ -66,7 +61,6 @@ const app = new Hono().
         return c.json({error:"Not Found"},404);
        }
        return c.json({data})
-
     }
   )
   .post(
@@ -87,7 +81,6 @@ const app = new Hono().
         userId:auth.userId,
         ...values,
       }).returning();
-      
       return c.json({data});
      })
    .post(
@@ -110,7 +103,7 @@ const app = new Hono().
       .delete(accounts)
       .where(
         and(
-          eq(accounts.userId,auth.userId),
+          eq(accounts.userId,auth.userId), // user can delete only his accounts
           inArray(accounts.id,values.ids)
         )
       )

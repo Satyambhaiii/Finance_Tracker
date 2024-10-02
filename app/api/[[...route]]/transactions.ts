@@ -25,9 +25,6 @@ const app = new Hono().
 
       if(!auth?.userId){
         return c.json({error:"Unauthorized"},401)
-        // throw new HTTPException(401,{
-        //   res: c.json({error:"Unauthorized"},401),
-        // });
       }
 
        const defaultTo = new Date();

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Datagrid } from "@/components/data-grid";
 import { DataCharts } from "@/components/data-charts";
 
+
 export default function DashboardPage() {
   const {onOpen} = useNewAccount();
   return(
@@ -18,26 +19,3 @@ export default function DashboardPage() {
   )
 }
 
-
-
-// export default function Home() {
-//   const {data:accounts,isLoading} = useGetAccounts(); 
-//   if(isLoading){
-//     return (
-//       <div>
-//         Loading...
-//       </div>
-//     );
-//   }
-
-//   return(
-//     <div>
-//          { accounts?.map((account)=>(
-//            <div key={account.id}> 
-//            {account.name};
-//            </div>
-//          ))}
-//     </div>
-//     // <UserButton afterSignOutUrl=""></UserButton>
-//    )
-// }

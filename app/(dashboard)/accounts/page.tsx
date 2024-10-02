@@ -10,20 +10,6 @@ import { DataTable } from "@/components/data-table";
 import { useGetAccounts } from "@/features/accounts/api/use-get-accounts";
 import { useBulkDeleteAccounts } from "@/features/accounts/api/use-bulk-delete-accounts";
 
-//  const data = [
-//     {
-//       id: "728ed52f",
-//       amount: 100,
-//       status: "pending",
-//       email: "m@example.com",
-//     },
-//     {
-//       id: "728ed52f",
-//       amount: 50,
-//       status: "success",
-//       email: "a@example.com",
-//     },
-//   ]
 
 const AccountsPage = () => {
   const newAccount = useNewAccount();
